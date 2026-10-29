@@ -1,26 +1,18 @@
-# Proyecto Big Data: Procesamiento en Batch y Tiempo Real con Apache Kafka y Spark
+# Tarea 3 - Procesamiento de Datos con Apache Spark (Batch)
 
-Este proyecto implementa una solución completa que abarca el análisis estático en *batch* y el procesamiento continuo en tiempo real (streaming).
+## 📌 Descripción de la Solución
+Este repositorio contiene la solución en **Python (PySpark)** para el procesamiento batch del dataset *"Colombianos inscritos en el Registro Ciudadano en Línea"*. El script se encarga de realizar la carga masiva del archivo CSV, la inferencia de esquemas y el procesamiento distribuido para la extracción de métricas clave, alcanzando un total procesado de **639,041 registros**.
 
-#  Tecnologías y Entorno
-* **Sistema Operativo:** Ubuntu (VirtualBox VM)
-* **Orquestación de Mensajes:** Apache ZooKeeper y Apache Kafka
-* **Procesamiento Distribuido:** Apache Spark (Batch y Structured Streaming)
-* **Lenguaje:** Python (PySpark)
+## 🛠️ Requisitos del Entorno
+* **Sistema Operativo:** Ubuntu (Máquina Virtual del curso Big Data).
+* **Motor de Procesamiento:** Apache Spark 3.5.8 (Modo Local).
+* **Lenguaje:** Python 3.12 con PySpark.
+* **Java:** OpenJDK 11.
 
----
+## 🚀 Instrucciones de Ejecución
 
-#  Estructura del Repositorio
-
-* `tarea3.py` (o `spark_batch_analysis.py`): Script de PySpark encargado del procesamiento y análisis en *batch* de los datos.
-* `streaming/kafka_producer.py`: Simulador de eventos (sensores) que transmite mensajes en formato JSON hacia un tópico de Kafka.
-* `streaming/spark_streaming_consumer.py`: Aplicación de Spark Structured Streaming que consume en tiempo real desde Kafka y calcula métricas en ventanas de tiempo.
-
----
-
-#  Instrucciones de Ejecución
-
-## 1. Ejecución del Procesamiento en Batch
-Para ejecutar el script de análisis estático con Spark:
-```bash
-spark-submit tarea3.py
+1. Clona este repositorio o descarga el código fuente en tu máquina virtual.
+2. Asegúrate de tener el archivo de datos nombrado como `datos.csv` en el mismo directorio del script.
+3. Activa el entorno virtual del curso:
+   ```bash
+   source mi_entorno/bin/activate
